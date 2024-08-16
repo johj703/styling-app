@@ -8,12 +8,34 @@ const StBox = styled.div`
   margin: 20px;
 `;
 
+const boxList = ["red", "green", "blue"];
+
+const getBoxName = (color) => {
+  switch (color) {
+    case "red":
+      return "빨간 박스";
+    case "green":
+      return "초록 박스";
+    case "blue":
+      return "파랑 박스";
+    default:
+      return "검정 박스";
+  }
+};
+
 function App() {
   return (
     <>
-      <StBox borderColor="red">빨간 박스</StBox>
+      {/* <StBox borderColor="red">빨간 박스</StBox>
       <StBox borderColor="green">초록 박스</StBox>
-      <StBox borderColor="blue">파랑 박스</StBox>
+      <StBox borderColor="blue">파랑 박스</StBox> */}
+      {boxList.map((boxColor) => {
+        return (
+          <StBox key={boxColor} borderColor={boxColor}>
+            {getBoxName(boxColor)}
+          </StBox>
+        );
+      })}
     </>
   );
 }
