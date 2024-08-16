@@ -8,10 +8,16 @@ const StBox = styled.div`
   margin: 20px;
 `;
 
+const StP = styled.p`
+  color: blue;
+`;
+
 function App() {
   return (
     <>
-      <StBox>박스</StBox>
+      <StBox>
+        <StP>스타일이 적용된 p 태그</StP>
+      </StBox>
     </>
   );
 }
