@@ -1,10 +1,10 @@
-const Child = ({count, setCount}) => {
+const Child = ({setCount}) => {
   return (
     <div>
       <h3>여기는 자식 컴포넌트 입니다.</h3>
       <button
         onClick={() => {
-            setCount(count + 1)
+            setCount((prev) => prev + 1)
         }}
       >증가!</button>
     </div>
