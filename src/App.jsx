@@ -5,16 +5,7 @@ const App = () => {
 
   return (
     <div>
-      {count}
-      <br />
-      <button onClick={() => {
-        // setCount(count + 1);
-        // setCount(count + 1);
-        // setCount(count + 1);
-        setCount((prev) => prev + 1);
-        setCount((prev) => prev + 1);
-        setCount((prev) => prev + 1);
-      }}>증가</button>
+      
     </div>
   )
 }
