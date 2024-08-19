@@ -11,7 +11,19 @@ const App = () => {
     countRef.current++;
   };
 
-  return <div>App</div>;
+  return (
+    <div>
+      <h1>useRef vs useState</h1>
+      <div>
+        state영역 입니다. {count} <br />
+        <button onClick={plusStateCountButtonHandler}>state 증가</button>
+      </div>
+      <div>
+        ref영역 입니다. {countRef.current} <br />
+        <button onClick={plusRefCountButtonHandler}>ref 증가</button>
+      </div>
+    </div>
+  );
 };
 
 export default App;
