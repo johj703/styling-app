@@ -1,28 +1,17 @@
 import { useState, useRef } from "react";
 
 const App = () => {
-  // useRef로 선언한 값은 컴포넌트가 렌더링이 되어도 값을 유지한다!
-  const ref = useRef("초기 값");
   const [count, setCount] = useState(0);
+  const countRef = useRef(0);
 
-  console.log("ref", ref);
+  const plusStateCountButtonHandler = () => {
+    setCount(count + 1);
+  };
+  const plusRefCountButtonHandler = () => {
+    countRef.current++;
+  };
 
-  ref.current = "바꾼 값";
-  console.log("current => ", ref);
-
-  return (
-    <div>
-      <h1>useRef</h1>
-      {count}
-      <button
-        onClick={() => {
-          setCount(count + 1);
-        }}
-      >
-        setCount
-      </button>
-    </div>
-  );
+  return <div>App</div>;
 };
 
 export default App;
