@@ -6,14 +6,14 @@ const GrandFather = () => {
   const pocketMoney = 10000;
 
   return (
-    <FamilyContext
+    <FamilyContext.Provider
       value={{
         houseName,
         pocketMoney,
       }}
     >
       <Father />
-    </FamilyContext>
+    </FamilyContext.Provider>
   );
 };
 
