@@ -6,7 +6,12 @@ const GrandFather = () => {
   const pocketMoney = 10000;
 
   return (
-    <FamilyContext>
+    <FamilyContext
+      value={{
+        houseName,
+        pocketMoney,
+      }}
+    >
       <Father houseName={houseName} pocketMoney={pocketMoney} />
     </FamilyContext>
   );
