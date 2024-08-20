@@ -1,8 +1,13 @@
-const Child = ({ houseName, pocketMoney }) => {
+import { useContext } from "react";
+import { FamilyContext } from "../context/FamilyContext";
+
+const Child = () => {
   const stressWord = {
     color: "red",
     fontWeight: "900",
   };
+
+  const data = useContext(FamilyContext);
 
   return (
     <div>
