@@ -12,7 +12,7 @@ const GrandFather = () => {
         pocketMoney,
       }}
     >
-      <Father houseName={houseName} pocketMoney={pocketMoney} />
+      <Father />
     </FamilyContext>
   );
 };
